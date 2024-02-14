@@ -1,0 +1,63 @@
+html {
+    background-image: url("FondoAudi.jpg");
+    background-size: 22%; /* Esto mantendrá la proporción de la imagen */
+    background-repeat: repeat; /* Esto hará que la imagen se repita horizontal y verticalmente */  
+    background-position: center; /* Esto centra la imagen en la página */    
+    background-attachment: fixed; /* Hace que la imagen de fondo se fije en la ventana del navegador, lo que significa que no se moverá incluso si el usuario se desplaza por la página. */
+    opacity: 0.8;
+}
+
+.top-left, .bottom-left, .centered, .top-right, .bottom-right {
+    transition: transform 0.3s ease;
+}
+
+.top-left:hover, .bottom-left:hover, .top-right:hover, .bottom-right:hover {
+    transform: scale(0.8);
+}
+
+.centered:hover {
+    transform: translate(-50%, -50%) scale(0.8);
+}
+
+/* La clase .top-left posiciona un elemento en la esquina superior izquierda de su contenedor */
+.top-left {         
+    position: absolute;
+    top: 0;  /* Mueve el borde superior del elemento al borde superior de su contenedor */
+    left: 0;  /* Mueve el borde izquierdo del elemento al borde izquierdo de su contenedor */         
+}
+
+
+/* La clase .bottom-left posiciona un elemento en la esquina inferior izquierda de su contenedor */ 
+.bottom-left {         
+    position: absolute;
+    bottom: 0;  /* Mueve el borde inferior del elemento al borde inferior de su contenedor */
+    left: 0;         
+}
+
+
+
+
+/* La clase .centered centra un elemento en su contenedor */
+.centered {
+    position: absolute;
+    /* ESTA COMBINACIÓN CENTRA EL ELEMENTO AL MEDIO DE LA PÁGINA */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* Mueve el elemento hacia atrás en un 50% de su propia altura y anchura, resultando en un centrado perfecto */
+    
+}
+
+/* La clase .top-right posiciona un elemento en la esquina superior derecha de su contenedor */
+.top-right {         
+    position: absolute;
+    top: 0;  /* Mueve el borde superior del elemento al borde superior de su contenedor */
+    right: 0;  /* Mueve el borde derecho del elemento al borde derecho de su contenedor */         
+}
+
+
+/* La clase .bottom-right posiciona un elemento en la esquina inferior derecha de su contenedor */ 
+.bottom-right {         
+    position: absolute;
+    bottom: 0;  /* Mueve el borde inferior del elemento al borde inferior de su contenedor */
+    right: 0;         
+}
